@@ -8,7 +8,6 @@ import ReactNative, {
   StyleSheet,
   UIManager,
   View,
-  ViewPropTypes,
   NativeModules,
   Text,
   ActivityIndicator
@@ -78,7 +77,7 @@ class WKWebView extends React.Component {
   static NavigationType = NavigationType;
 
   static propTypes = {
-    ...ViewPropTypes,
+    ...View.propTypes,
 
     html: deprecatedPropType(
       PropTypes.string,
@@ -198,7 +197,7 @@ class WKWebView extends React.Component {
     onNavigationStateChange: PropTypes.func,
     scalesPageToFit: PropTypes.bool,
     startInLoadingState: PropTypes.bool,
-    style: ViewPropTypes.style,
+    style: View.propTypes.style,
     /**
      * Sets the JS to be injected when the webpage loads.
      */
